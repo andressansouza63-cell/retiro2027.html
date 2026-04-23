@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição Retiro 2027 - Batista Comunhão</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-escuro: #0a1e3c;
+            --azul-principal: #1a3a5f;
+            --azul-claro: #3a7bd5;
+            --branco: #ffffff;
+            --cinza-fundo: #f4f7f9;
+            --alerta: #d9534f;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--azul-escuro);
+            background-color: var(--branco);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        header { padding: 30px 0; text-align: center; border-bottom: 1px solid #eee; }
+        header h1 { font-size: 1.2rem; font-weight: 700; color: var(--azul-principal); }
+
+        .hero { padding: 50px 0; text-align: center; background: linear-gradient(to bottom, #fdfdfd, #f4f7f9); }
+        .hero h2 { font-size: 2.5rem; color: var(--azul-escuro); margin-bottom: 10px; }
+        
+        .btn-link {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 5px;
+            text-decoration: none;
+            color: var(--azul-principal);
+            border: 1.5px solid var(--azul-principal);
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+        .btn-link:hover { background: var(--azul-principal); color: var(--branco); }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0; text-align: center;
+        }
+        .info-card { padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+
+        .banner-crianca {
+            background: var(--azul-principal);
+            color: var(--branco);
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .pricing { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 50px; }
+        .card {
+            flex: 1;
+            min-width: 300px;
+            padding: 35px;
+            border: 1px solid #e1e8ed;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .card.destaque { border: 2px solid var(--azul-claro); background: #f0f7ff; }
+        .price-tag { font-size: 2.2rem; font-weight: 700; color: var(--azul-principal); margin: 10px 0; }
+        .parcelas { font-weight: 700; color: var(--azul-claro); margin-bottom: 15px; }
+        .card ul { text-align: left; list-style: none; font-size: 0.9rem; }
+        .card ul li { margin-bottom: 8px; padding-left: 20px; position: relative; }
+        .card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--azul-claro); }
+
+        .form-section { background: var(--cinza-fundo); padding: 60px 0; }
+        .form-box {
+            max-width: 650px;
+            margin: 0 auto;
+            background: var(--branco);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .row { display: flex; gap: 15px; margin-bottom: 15px; }
+        .field { flex: 1; margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 700; font-size: 0.85rem; }
+        input, select { width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-family: 'Lato', sans-serif; }
+        
+        /* Estilo para campos obrigatórios faltando */
+        input:invalid, select:invalid { border: 1px solid #ffcccc; }
+
+        .btn-enviar {
+            width: 100%;
+            padding: 18px;
+            background: var(--azul-principal);
+            color: var(--branco);
+            border: none;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .info-pagamento {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff5f5;
+            border-left: 4px solid var(--alerta);
+            font-size: 0.9rem;
+        }
+
+        .aviso-final {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        footer { padding: 40px 0; text-align: center; font-size: 0.8rem; color: #777; }
+
+        @media (max-width: 600px) { .row { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Igreja Batista Comunhão</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>RETIRO 2027</h2>
+            <p>06, 07, 08 e 09 de Fevereiro | Recanto Harmonia - Tremembé/SP</p>
+            <div>
+                <a href="https://www.instagram.com/batistacomunhaot/" target="_blank" class="btn-link">Instagram da Igreja</a>
+                <a href="https://www.instagram.com/recantoharmoniaoficial/" target="_blank" class="btn-link">Conheça o Local</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="grid-info">
+            <div class="info-card"><strong>Hospedagem</strong><br>4 Dias Completos</div>
+            <div class="info-card"><strong>Alimentação</strong><br>Inclusa no período</div>
+            <div class="info-card"><strong>Ministração e Louvor</strong><br>Manhã e Noite</div>
+            <div class="info-card"><strong>Lazer e Atividades</strong><br>Piscina, Quadra e Competições</div>
+        </div>
+
+        <div class="banner-crianca">
+            <h3>VALORES PARA CRIANÇAS</h3>
+            <p>Até 6 anos: Isentas | De 7 a 12 anos: Meia-entrada R$ 175,00</p>
+        </div>
+
+        <div class="pricing">
+            <div class="card">
+                <h3>Quarto Comunitário</h3>
+                <div class="price-tag">R$ 350,00</div>
+                <div class="parcelas">9x de R$ 38,89</div>
+                <ul>
+                    <li>Hospedagem (4 dias completos)</li>
+                    <li>Alimentação inclusa</li>
+                    <li>Participação em todas as atividades</li>
+                </ul>
+            </div>
+
+            <div class="card destaque">
+                <h3>Suíte Familiar</h3>
+                <div class="price-tag">R$ 750,00</div>
+                <div class="parcelas">9x de R$ 83,33</div>
+                <ul>
+                    <li><strong>Apenas 4 vagas - Reserve agora</strong></li>
+                    <li>Exclusivo: Famílias ou Casais Casados</li>
+                    <li>Banheiro Individual e TV</li>
+                    <li>Ventilador (sem ar-condicionado)</li>
+                    <li>Cama casal + solteiro ou beliche</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="form-section">
+        <div class="container">
+            <div class="form-box">
+                <h2 style="text-align: center; margin-bottom: 30px;">Inscrição Obrigatória</h2>
+                <form id="formRetiro">
+                    <div class="field"><label>Nome Completo *</label><input type="text" id="nome" required placeholder="Preenchimento obrigatório"></div>
+                    
+                    <div class="row">
+                        <div class="field"><label>E-mail *</label><input type="email" id="email" required placeholder="email@exemplo.com"></div>
+                        <div class="field"><label>WhatsApp *</label><input type="tel" id="whatsapp" required placeholder="(00) 00000-0000"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label>Gênero *</label>
+                            <select id="genero" required>
+                                <option value="">Selecione...</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Masculino">Masculino</option>
+                            </select>
+                        </div>
+                        <div class="field"><label>Idade *</label><input type="number" id="idade" required></div>
+                    </div>
+
+                    <div class="field">
+                        <label>Tipo de Acomodação *</label>
+                        <select id="acomodacao" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="Quarto Comunitário">Quarto Comunitário</option>
+                            <option value="Suíte Familiar">Suíte Familiar</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label>Data de Pagamento Mensal *</label>
+                            <select id="data_pag" required>
+                                <option value="">Selecione o dia...</option>
+                                <option value="5">Todo dia 05</option>
+                                <option value="10">Todo dia 10</option>
+                                <option value="15">Todo dia 15</option>
+                                <option value="20">Todo dia 20</option>
+                                <option value="30">Todo dia 30</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Forma de Pagamento *</label>
+                            <select id="forma_pag" required>
+                                <option value="">Escolha como pagar...</option>
+                                <option value="Pagamento à Vista">Pagamento à Vista</option>
+                                <option value="Parcelado em 9x">Parcelado em 9X</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>Interesse em ser Voluntário? *</label>
+                        <select id="voluntario" required>
+                            <option value="">Selecione...</option>
+                            <option value="Não">Não no momento</option>
+                            <option value="Sim">Sim, gostaria de ajudar</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Confirmar Inscrição e Enviar PIX</button>
+
+                    <div class="info-pagamento">
+                        <p><strong>CHAVE PIX: erobertocosta@gmail.com</strong></p>
+                        <p style="color: var(--alerta); font-weight: 700;">⚠️ NÃO ENVIAR PARA O PIX DA IGREJA.</p>
+                        <p><strong>⚠️ IMPORTANTE: Descreva no comprovante qual parcela está pagando (ex: 1ª Parcela).</strong></p>
+                        <p>Obrigatório enviar comprovante para Andressa (11 95967-2236).</p>
+                        <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">
+                        <p><strong>Reembolso:</strong> 100% até 3 meses antes (até 06/11/2026). Após isso, sem reembolso.</p>
+                        <p><strong>Quitação Total:</strong> Até 30/01/2027.</p>
+                    </div>
+
+                    <div class="aviso-final">
+                        O Tema do Retiro e os Horários de Entrada/Saída serão informados posteriormente.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>© 2027 Igreja Batista Comunhão</p></footer>
+
+    <script>
+        document.getElementById('formRetiro').addEventListener('submit', function(e) {
+            // A verificação 'required' no HTML já impede o envio, 
+            // mas o JS reforça a abertura do link apenas se o formulário for válido.
+            if (!this.checkValidity()) {
+                return;
+            }
+            
+            e.preventDefault();
+            
+            const campos = {
+                nome: document.getElementById('nome').value,
+                genero: document.getElementById('genero').value,
+                idade: document.getElementById('idade').value,
+                zap: document.getElementById('whatsapp').value,
+                email: document.getElementById('email').value,
+                acomodacao: document.getElementById('acomodacao').value,
+                data: document.getElementById('data_pag').value,
+                forma: document.getElementById('forma_pag').value,
+                voluntario: document.getElementById('voluntario').value
+            };
+
+            const msg = `*INSCRIÇÃO RETIRO 2027*%0A%0A` +
+                        `*Nome:* ${campos.nome}%0A*Gênero:* ${campos.genero}%0A*Idade:* ${campos.idade}%0A` +
+                        `*WhatsApp:* ${campos.zap}%0A*E-mail:* ${campos.email}%0A*Acomodação:* ${campos.acomodacao}%0A` +
+                        `*Dia de Pagamento:* ${campos.data}%0A` +
+                        `*Forma:* ${campos.forma}%0A` +
+                        `*Voluntário:* ${campos.voluntario}%0A%0A` +
+                        `_Estou enviando o comprovante com a descrição da parcela em anexo._`;
+
+            window.open(`https://wa.me/5511959672236?text=${msg}`, '_blank');
+        });
+    </script>
+</body>
+</html>
